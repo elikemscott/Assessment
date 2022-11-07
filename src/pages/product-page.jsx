@@ -8,6 +8,8 @@ import "../../src/product.css"
 import axios from "axios";
 import { useLocation } from "react-router-dom"
 import { InputText } from 'primereact/inputtext';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 
 // function Product() {
@@ -147,8 +149,12 @@ function Product() {
         <>
             {isLoading ? <ProgressSpinner style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center" }} /> :
 
+            
+
+
 
                 < div class="card-wrapper" >
+                    <Navbar/>
                     <div class="card">
                         {/* <!-- card left --> */}
                         <div class="product-imgs">
@@ -236,6 +242,7 @@ function Product() {
                             </div>
                         </div>
                     </div>
+                    <Footer/>
                 </div>
             }
         </>
