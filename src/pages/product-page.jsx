@@ -220,17 +220,17 @@ function Product() {
 
                             </div>
                             <div className='inputField' style={{ display: "flex", justifyContent: "" }}>
-                                <div className='label' style={{}}>Number on shirt<span style={{ color: "red" }}>*</span></div>
+                                <div className='label' style={{}}>Number on shirt</div>
                                 <div className='input' style={{ padding: "0" }}><InputText style={{ padding: "1px", borderRadius: "0" }} placeholder="Enter number between 0-99" /></div>
 
                             </div>
                             <div className='inputField' style={{ display: "flex" }}>
-                                <div className='label'>Patch<span style={{ color: "red" }}>*</span></div>
+                                <div className='label'>Patch</div>
                                 <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important" }} placeholder='Select patch' /></div>
 
                             </div>
                             <div className='inputField' style={{ display: "flex" }}>
-                                <div className='label'>Quantity<span style={{ color: "red" }}>*</span></div>
+                                <div className='label'>Quantity</div>
                                 <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important", width: "7rem" }} placeholder='Select patch' /></div>
 
                             </div>
