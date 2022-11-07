@@ -152,9 +152,10 @@ function Product() {
             
 
 
-
+<div>
+<Navbar/>
                 < div class="card-wrapper" >
-                    <Navbar/>
+                  
                     <div class="card">
                         {/* <!-- card left --> */}
                         <div class="product-imgs">
@@ -242,7 +243,9 @@ function Product() {
                             </div>
                         </div>
                     </div>
-                    <Footer/>
+                    
+                </div>
+                <Footer/>
                 </div>
             }
         </>
