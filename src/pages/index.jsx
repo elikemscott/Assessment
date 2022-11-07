@@ -9,10 +9,13 @@ function Index() {
   return (
     <>
     <Navbar/>
-    {/* <Carousel/> */}
-    {/* <Main/> */}
-    {/* <Footer/> */}
-    {/* <Product/> */}
+    <div className='main-content'>
+    <Carousel/>
+    <Main/>
+    </div>
+   
+    <Footer/>
+
     </>
   )
 }
