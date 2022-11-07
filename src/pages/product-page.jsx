@@ -147,107 +147,107 @@ function Product() {
         "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg",]
     return (
         <>
-            {isLoading ? <ProgressSpinner style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center" }} /> :
+            <Navbar />
+            <div className='main-content'>
+                {isLoading ? <ProgressSpinner style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center" }} /> :
+                    <div>
 
-            
+                        < div class="card-wrapper" >
 
-
-<div>
-<Navbar/>
-                < div class="card-wrapper" >
-                  
-                    <div class="card">
-                        {/* <!-- card left --> */}
-                        <div class="product-imgs">
-                            <div class="img-display">
-                                <div class="img-showcase" style={{ transform: `translateX(calc(-${index * 100}%))` }}>
-                                    {imag.map((src, i) => <img alt="shoe image" src={src} />
-                                    )}
+                            <div class="card">
+                                {/* <!-- card left --> */}
+                                <div class="product-imgs">
+                                    <div class="img-display">
+                                        <div class="img-showcase" style={{ transform: `translateX(calc(-${index * 100}%))` }}>
+                                            {imag.map((src, i) => <img alt="shoe image" src={src} />
+                                            )}
 
 
+                                        </div>
+                                    </div>
+                                    <div class="img-select">
+                                        {imag.length > 1 && imag.map((src, i) => {
+
+                                            return (
+                                                <div class="img-item" onClick={() => { console.log(i); setIndex(i) }}>
+                                                    <a href="#" >
+                                                        <img src={src} style={{ opacity: i === index ? "1" : "0.5" }} alt="shoe image" />
+                                                    </a>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h5>{product?.product_name}</h5>
+
+                                    <div class="product-price">
+                                        <div style={{ display: "flex", justifyContent: "space-between" }}>  <span class="last-price">30.00 &nbsp; <span>$89.00</span>&nbsp; <span style={{ backgroundColor: "#23C353", width: "30px", color: "white", padding: "0.1rem", textDecoration: "none", fontSize: "16px" }}>Save&nbsp;67%</span> </span>  <span style={{
+                                            width: "145px",
+                                            border: "1px solid lightgrey",
+                                            fontSize: "12px", fontWeight: "400",
+                                            display: "flex",
+                                            alignItems: "center", cursor: "pointer",
+
+                                            justifyContent: 'center'
+                                        }}><span><i className="pi pi-heart" style={{ 'fontSize': '0.8em' }}></i></span> &nbsp;<span>Add to favorites</span></span></div>
+                                    </div>
+
+                                    <div class="product-detail">
+
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
+
+                                    </div>
+
+                                    <div className='inputField' style={{ display: "flex" }}>
+                                        <div className='label'>Size<span style={{ color: "red" }}>*</span></div>
+                                        <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important" }} placeholder='Select a shirt size' /></div>
+                                        <div className='' style={{
+                                            width: "145px",
+                                            border: "1px solid lightgrey",
+                                            fontSize: "12px",
+                                            fontWeight: "400",
+                                            display: "flex",
+                                            alignItems: "center", cursor: "pointer",
+                                            justifyContent: 'center',
+                                            marginLeft: "auto"
+                                        }}>View size chart</div>
+                                    </div>
+                                    <div className='inputField' style={{ display: "flex", justifyContent: "" }}>
+                                        <div className='label' style={{}}>Name<span style={{ color: "red" }}>*</span></div>
+                                        <div className='input' style={{ padding: "0" }}><InputText style={{ padding: "1px", borderRadius: "0" }} placeholder="What name would you want on the shirt" /></div>
+
+                                    </div>
+                                    <div className='inputField' style={{ display: "flex", justifyContent: "" }}>
+                                        <div className='label' style={{}}>Number on shirt</div>
+                                        <div className='input' style={{ padding: "0" }}><InputText style={{ padding: "1px", borderRadius: "0" }} placeholder="Enter number between 0-99" /></div>
+
+                                    </div>
+                                    <div className='inputField' style={{ display: "flex" }}>
+                                        <div className='label'>Patch</div>
+                                        <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important" }} placeholder='Select patch' /></div>
+
+                                    </div>
+                                    <div className='inputField' style={{ display: "flex" }}>
+                                        <div className='label'>Quantity</div>
+                                        <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important", width: "7rem" }} placeholder='Select patch' /></div>
+
+                                    </div>
+                                    <div className="checkout">
+                                        <Button className="addCart google p-0" aria-label="Google" style={{ borderRadius: "0" }}>
+                                            <span className="px-3">Add to cart</span>
+                                            <i className="pi pi-shopping-cart " style={{ padding: "1rem" }}></i>
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="img-select">
-                                {imag.length > 1 && imag.map((src, i) => {
 
-                                    return (
-                                        <div class="img-item" onClick={() => { console.log(i); setIndex(i) }}>
-                                            <a href="#" >
-                                                <img src={src} style={{ opacity: i === index ? "1" : "0.5" }} alt="shoe image" />
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </div>
                         </div>
-                        <div class="product-content">
-                            <h5>{product?.product_name}</h5>
 
-                            <div class="product-price">
-                                <div style={{ display: "flex", justifyContent: "space-between" }}>  <span class="last-price">30.00 &nbsp; <span>$89.00</span>&nbsp; <span style={{ backgroundColor: "#23C353", width: "30px", color: "white", padding: "0.1rem", textDecoration: "none", fontSize: "16px" }}>Save&nbsp;67%</span> </span>  <span style={{
-                                    width: "145px",
-                                    border: "1px solid lightgrey",
-                                    fontSize: "12px", fontWeight: "400",
-                                    display: "flex",
-                                    alignItems: "center", cursor: "pointer",
-
-                                    justifyContent: 'center'
-                                }}><span><i className="pi pi-heart" style={{ 'fontSize': '0.8em' }}></i></span> &nbsp;<span>Add to favorites</span></span></div>
-                            </div>
-
-                            <div class="product-detail">
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-
-                            </div>
-
-                            <div className='inputField' style={{ display: "flex" }}>
-                                <div className='label'>Size<span style={{ color: "red" }}>*</span></div>
-                                <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important" }} placeholder='Select a shirt size' /></div>
-                                <div className='' style={{
-                                    width: "145px",
-                                    border: "1px solid lightgrey",
-                                    fontSize: "12px",
-                                    fontWeight: "400",
-                                    display: "flex",
-                                    alignItems: "center", cursor: "pointer",
-                                    justifyContent: 'center',
-                                    marginLeft: "auto"
-                                }}>View size chart</div>
-                            </div>
-                            <div className='inputField' style={{ display: "flex", justifyContent: "" }}>
-                                <div className='label' style={{}}>Name<span style={{ color: "red" }}>*</span></div>
-                                <div className='input' style={{ padding: "0" }}><InputText style={{ padding: "1px", borderRadius: "0" }} placeholder="What name would you want on the shirt" /></div>
-
-                            </div>
-                            <div className='inputField' style={{ display: "flex", justifyContent: "" }}>
-                                <div className='label' style={{}}>Number on shirt</div>
-                                <div className='input' style={{ padding: "0" }}><InputText style={{ padding: "1px", borderRadius: "0" }} placeholder="Enter number between 0-99" /></div>
-
-                            </div>
-                            <div className='inputField' style={{ display: "flex" }}>
-                                <div className='label'>Patch</div>
-                                <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important" }} placeholder='Select patch' /></div>
-
-                            </div>
-                            <div className='inputField' style={{ display: "flex" }}>
-                                <div className='label'>Quantity</div>
-                                <div className='input' style={{ padding: "0" }}><Dropdown style={{ padding: "0 !important", width: "7rem" }} placeholder='Select patch' /></div>
-
-                            </div>
-                            <div className="checkout">
-                                <Button className="addCart google p-0" aria-label="Google" style={{ borderRadius: "0" }}>
-                                    <span className="px-3">Add to cart</span>
-                                    <i className="pi pi-shopping-cart " style={{ padding: "1rem"  }}></i>
-                                </Button>
-                            </div>
-                        </div>
                     </div>
-                    
-                </div>
-                <Footer/>
-                </div>
-            }
+                }
+            </div>
+            <Footer />
         </>
     )
 }

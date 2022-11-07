@@ -13,6 +13,7 @@ function Index() {
     <Carousel/>
     <Main/>
     </div>
+    
    
     <Footer/>
 
