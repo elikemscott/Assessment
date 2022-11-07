@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 // import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css'
+// import 'react-image-gallery/styles/css/image-gallery.css'
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import { ProgressSpinner } from 'primereact/progressspinner';
